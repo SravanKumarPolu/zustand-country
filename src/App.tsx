@@ -5,8 +5,8 @@ function SearchBox() {
   const setSearch = useCountry((state) => state.setSearch);
   return (
     <input
-      className="m-3 block w-full rounded-md
-      border-gray-300 shadow-sm focus:border-blue-500"
+      type="text"
+      className="my-3  px-4 py-2 block w-full rounded border border-gray-300 shadow-sm focus:outline-blue-500 appearance-none"
       placeholder="Search"
       value={search}
       onChange={(event) => setSearch(event.target.value)}
@@ -42,7 +42,7 @@ const CountryList = () => {
 function App() {
   return (
     <>
-      <div className="app">
+      <div className="app m-2">
         <SearchBox />
         <CountryList />
       </div>

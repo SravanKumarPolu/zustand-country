@@ -39,3 +39,9 @@ export const useCountry = create<{
   search: "",
   setSearch: (search) => set({ search }),
 }));
+
+fetch("/Countries.json")
+  .then((res) => res.json())
+  .then((country) => {
+    useCountry.getState().setAllCountry(country);
+  });
