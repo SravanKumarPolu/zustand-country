@@ -26,18 +26,32 @@ export interface Country {
   independent: boolean;
 }
 
+const searchAndSortCountry = (country: Country[], search: string) =>
+  country
+    .filter((c) => c.name.toLowerCase().startsWith(search.toLowerCase()))
+    .slice(0, 10)
+    .sort((a, b) => a.name.localeCompare(b.name));
+
 export const useCountry = create<{
   country: Country[];
   allCountry: Country[];
   setAllCountry: (country: Country[]) => void;
   search: string;
   setSearch: (search: string) => void;
-}>((set) => ({
+}>((set, get) => ({
   country: [],
   allCountry: [],
-  setAllCountry: (country) => set({ allCountry: country, country }),
+  setAllCountry: (country) =>
+    set({
+      allCountry: country,
+      country: searchAndSortCountry(country, get().search),
+    }),
   search: "",
-  setSearch: (search) => set({ search }),
+  setSearch: (search) =>
+    set({
+      search,
+      country: searchAndSortCountry(get().allCountry, search),
+    }),
 }));
 
 fetch("/Countries.json")
