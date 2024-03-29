@@ -1,4 +1,5 @@
-export interface CountryFlag {
+import create from "zustand";
+export interface Country {
   name: string;
   alpha2Code: string;
   alpha3Code: string;
@@ -24,3 +25,17 @@ export interface CountryFlag {
   flag: string;
   independent: boolean;
 }
+
+export const useCountry = create<{
+  country: Country[];
+  allCountry: Country[];
+  setAllCountry: (country: Country[]) => void;
+  search: string;
+  setSearch: (search: string) => void;
+}>((set) => ({
+  country: [],
+  allCountry: [],
+  setAllCountry: (country) => set({ allCountry: country, country }),
+  search: "",
+  setSearch: (search) => set({ search }),
+}));
