@@ -29,7 +29,7 @@ export interface Country {
 const searchAndSortCountry = (country: Country[], search: string) =>
   country
     .filter((c) => c.name.toLowerCase().startsWith(search.toLowerCase()))
-    .slice(0, 10)
+
     .sort((a, b) => a.name.localeCompare(b.name));
 
 export const useCountry = create<{
