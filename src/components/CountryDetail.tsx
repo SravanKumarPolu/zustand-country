@@ -23,11 +23,15 @@ export default function CountryDetail() {
   } = countryData;
 
   return (
-    <div className=" text-white flex flex-col  h-full p-4">
+    <div className=" bg-blue-400 text-white flex flex-col  h-full p-4">
       <Link to="/" className=" text-white mb-4 ">
-        <h1 className=" bg-slate-400 w-36  shadow-md text-2xl font-semibold  px-6 m-1">
+        <h1
+          className=" bg-slate-400 w-36  shadow-md text-2xl 
+        font-semibold  px-6 m-1 hover:bg-slate-500">
           {/* <span className=" w-14 mr-2">&#8592;</span> */}
-          <div className="flex justify-around align-middle text-center hover:translate-x-4 transition-transform duration-333 ease-in-out">
+          <div
+            className="flex justify-around align-middle
+           text-center hover:-translate-x-4 transition-transform duration-333 ease-in-out">
             <span className="py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
