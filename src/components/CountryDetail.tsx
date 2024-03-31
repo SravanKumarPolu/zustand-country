@@ -9,7 +9,11 @@ export default function CountryDetail() {
   const countryData = country.find((c) => c.name === name);
 
   if (!countryData) {
-    return <div>No Country Found</div>;
+    return (
+      <Link to="/" className="  mb-4 ">
+        <div className="">No Country Found</div>
+      </Link>
+    );
   }
   const {
     flag,

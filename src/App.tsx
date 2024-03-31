@@ -26,7 +26,7 @@ const routes = [
 function App() {
   return (
     <>
-      <div className=" m-2">
+      <div className=" bg-blue-500 flex flex-col  ">
         <Router location={location} routes={routes}>
           <Outlet />
         </Router>
