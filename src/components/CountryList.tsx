@@ -5,7 +5,7 @@ export const CountryList = () => {
   const country = useCountry((state) => state.country);
   return (
     <div className="m-3 mr-2 ">
-      <div className=" lg:h-[36.5rem] h-auto overflow-y-auto scrollbar-hide">
+      <div className=" lg:h-[41rem] h-auto overflow-y-auto scrollbar-hide">
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ml-1 m-3 ">
           {country.map((c) => (
             <Link key={c.name} to={`./countryFlag/${c.name}`}>
