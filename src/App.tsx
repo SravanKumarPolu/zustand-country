@@ -26,7 +26,7 @@ const routes = [
 function App() {
   return (
     <>
-      <div className=" bg-blue-500 flex flex-col overflow-y-auto scrollbar-hide lg:h-auto">
+      <div className=" bg-blue-500 flex flex-col overflow-y-auto scrollbar-hide h-screen">
         <Router location={location} routes={routes}>
           <Outlet />
         </Router>

@@ -10,7 +10,7 @@ export default function CountryDetail() {
 
   if (!countryData) {
     return (
-      <div className="h-[1080px]">
+      <div className=" h-screen">
         <Link to="/" className="  mb-4  ">
           <div
             className=" bg-slate-400 w-36  shadow-md text-xl 
@@ -41,7 +41,7 @@ export default function CountryDetail() {
             </div>
           </div>
 
-          <h2 className=" text-center mt-10">No Country Found</h2>
+          <h2 className="  text-center text-2xl my-[20%] ">No Country Found</h2>
         </Link>
       </div>
     );
@@ -58,7 +58,7 @@ export default function CountryDetail() {
   } = countryData;
 
   return (
-    <div className=" bg-blue-400 text-white flex flex-col  h-full p-4">
+    <div className="  text-white flex flex-col  h-screen p-4">
       <Link to="/" className=" text-white mb-4 ">
         <h1
           className=" bg-slate-400 w-36  shadow-md text-2xl 
