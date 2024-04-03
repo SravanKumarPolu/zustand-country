@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-location";
 import { useCountry } from "../store";
+import { motion } from "framer-motion";
 
 export const CountryList = () => {
   const country = useCountry((state) => state.country);
@@ -12,14 +13,32 @@ export const CountryList = () => {
               <li
                 key={c.name}
                 className=" col-span-1  rounded-lg text-center bg-white shadow-xl  ">
-                <div className="flex flex-1 flex-col p-8 justify-center items-center">
-                  <img
-                    src={c.flag}
-                    className="w-32  h-32 align-middle rounded object-center"
-                  />
+                <div className="flex flex-1 flex-col p-8 justify-center items-center shadow-md">
+                  <motion.div
+                    initial={{ opacity: 0.5, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 3.4 }}
+                    className="flex bg-cyan-500  w-40 h-40 justify-center items-center rounded-sm">
+                    <img
+                      src={c.flag}
+                      className="px-1 align-middle rounded object-center shadow-md"
+                    />
+                  </motion.div>
 
-                  <h2 className="py-4">{c.name}</h2>
-                  {/* <span>Capital:{c.capital}</span> */}
+                  <motion.h2
+                    initial={{ opacity: 0.5, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2.4 }}
+                    className="py-4">
+                    {c.name}
+                  </motion.h2>
+                  <motion.span
+                    className="DM "
+                    initial={{ opacity: 0.1, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 3.4 }}>
+                    Capital:<span> {c.capital}</span>
+                  </motion.span>
                 </div>
               </li>
             </Link>
