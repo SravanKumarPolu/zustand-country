@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 export const CountryList = () => {
   const country = useCountry((state) => state.country);
   return (
-    <div className="m-3 mr-2 ">
-      <div className=" lg:h-[41rem] h-auto overflow-y-auto scrollbar-hide">
+    <div className="mx-3 mr-2 mt-[5%] ">
+      <div className="  h-auto overflow-y-auto scrollbar-hide ">
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ml-1 m-3 ">
           {country.map((c) => (
             <Link key={c.name} to={`./countryFlag/${c.name}`}>
               <li
                 key={c.name}
-                className=" col-span-1  rounded-lg text-center bg-white shadow-xl  ">
+                className=" col-span-1  rounded-sm text-center bg-white shadow-xl  ">
                 <div className="flex flex-1 flex-col p-8 justify-center items-center shadow-md">
                   <motion.div
                     initial={{ opacity: 0.5, x: -20 }}
