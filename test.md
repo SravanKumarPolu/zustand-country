@@ -22,16 +22,26 @@ MarkDown check sheets :smile: :joy: :cry:
 
 [This is my website](https://sravanpolu.me/)
 
+## Portfolio Sections
+
 - # When and Where
 
   1.Documentation
   2.Bloggings
 
   - This is a nested list
-    - Of items
-      1. this use
+    1. this use
 
   ***
+
+## Portfolio Sections
+
+1. Header
+2. Hero-page
+   1. Work
+      1. a. Work
+      2. b. Resume
+3. Footer
 
 - [ ] Update the website
 - [x] Write the press release

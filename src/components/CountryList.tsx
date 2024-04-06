@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const CountryList = () => {
   const country = useCountry((state) => state.country);
   return (
-    <div className="mx-3 mr-2 mt-[5%] ">
+    <div className="mx-3 mr-2 md:lg-[10%] mt-24">
       <div className="  h-auto overflow-y-auto scrollbar-hide ">
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ml-1 m-3 ">
           {country.map((c) => (
