@@ -1,5 +1,5 @@
 
-# zustand-country 
+# zustand-country  demo project 
 ##  Utilized Programming  Languages and Libraries:
  1. React
  2. TypeScript
@@ -11,4 +11,4 @@
 understanding of the technologies I've worked with.
 
 
-### My website click <a href="https://skr-zustand-country.netlify.app/" target="_blank">Task with Breaks</a>
+### My website click <a href="https://skr-zustand-country.netlify.app/" target="_blank">Zustand-Country-Demo</a>
