@@ -6,8 +6,8 @@
  3. Tailwind
  4. Zustand
 ## Project Working Time Experience
-- In this project, I mainly focused on Zustand. I used Zustand without hooks to build this project.
--  - Even without professional experience, listing My projects prominently can demonstrate My practical skills and
+  - In this project, I mainly focused on Zustand. I used Zustand without hooks to build this project.
+  - Even without professional experience, listing My projects prominently can demonstrate My practical skills and
 understanding of the technologies I've worked with.
 
 
